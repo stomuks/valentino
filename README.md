@@ -1,6 +1,5 @@
 README.md
 
-<!--
 <svg class="icon">
   <use xlink:href="/sprite.svg#arrow"></use>
 </svg>
@@ -16,4 +15,3 @@ README.md
 <svg class="icon">
   <use xlink:href="/sprite.svg#union"></use>
 </svg>
--->
