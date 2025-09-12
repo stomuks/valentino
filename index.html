@@ -9,9 +9,10 @@
 		<div class="wrapper">
 			<header class="header">
 				<div class="header__wrapper">
-					<span class="header__button-open"></span>
+					<span class="header__name">Valentina Drofa</span>
+					<button class="header__button-open"></button>
 					<div class="header__body">
-						<span class="header__button-close"></span>
+						<button class="header__button-close"></button>
 						<nav class="header__menu">
 							<ul class="header__list">
 								<li class="header__item">
@@ -41,11 +42,9 @@
 				</div>
 			</header>
 			<section class="name">
-				<div class="name__wrapper">
-					<div class="name__icon">
-						<svg class="icon">
-							<use xlink:href="/sprite.svg#name"></use>
-						</svg>
+				<div class="name__container">
+					<div class="name__wrapper">
+						<h1 class="name__title">Valentina Drofa</h1>
 					</div>
 				</div>
 			</section>
@@ -70,13 +69,13 @@
 			<section class="about">
 				<div class="about__container">
 					<div class="about__grid">
-						<h2 class="about__side">ABOUT ME</h2>
+						<h2 class="about__title">ABOUT ME</h2>
 						<article class="about__me">
 							<p class="about__bio">
-								I’m Valentina Drofa. My career began in finance in 2007, where I
-								built a solid foundation of expertise and connections. This
-								knowledge proved invaluable when I moved into EdTech and founded
-								my first company.
+								I’m Valentina Drofa. My career began in finance <i>in 2007</i>,
+								where I built a solid foundation of expertise and connections.
+								This knowledge proved invaluable when I moved into EdTech and
+								founded my first company.
 							</p>
 							<div class="about__img">
 								<img src="./img/about1.png" alt="" />
@@ -106,8 +105,9 @@
 								</p>
 								<p class="about__bio">
 									At Drofa Comms, we operate based on four core values:
-									integrity, respect, growth, proactivity. These principles
-									shape how we work — both with each other and with our clients.
+									<i>integrity, respect, growth, proactivity</i>. These
+									principles shape how we work — both with each other and with
+									our clients.
 								</p>
 							</div>
 						</article>
@@ -150,73 +150,95 @@
 					<div class="projects__wrapper">
 						<h2 class="projects__title">My projects</h2>
 						<div class="projects__blocks">
-							<div class="projects__block block">
+							<a href="#" class="projects__block block">
 								<div class="block__grid">
 									<div class="block__img">
 										<img src="./img/project1.png" alt="" />
 									</div>
 									<div class="block__wrapper">
-										<h3 class="block__title">Drofa Comms</h3>
-										<p class="block__text">
-											A globally recognised communications agency helping
-											financial and fintech brands earn trust, gain visibility,
-											and achieve business goals. Known for strategy-first PR
-											approaches, media impact, and international campaigns.
-										</p>
+										<div class="block__info">
+											<h3 class="block__title">Drofa <i>Comms</i></h3>
+											<p class="block__text">
+												A globally recognised communications agency helping
+												financial and fintech brands earn trust,
+												gain visibility, and achieve business goals. Known for
+												strategy-first PR approaches, media impact, and
+												international campaigns.
+											</p>
+										</div>
+										<span class="block__btn btn-transparent btn-arrow"
+											>learn more</span
+										>
 									</div>
 								</div>
-							</div>
-							<div class="projects__block block">
-								<div class="block__grid reverse">
+							</a>
+							<a href="#" class="projects__block block">
+								<div class="block__grid">
 									<div class="block__img">
 										<img src="./img/project2.png" alt="" />
 									</div>
 									<div class="block__wrapper">
-										<h3 class="block__title">Women Leading The Way</h3>
-										<p class="block__text">
-											A community-led initiative supporting women in finance,
-											fintech, and business leadership. Women Leading the Way
-											highlights the importance of female leadership and gender
-											diversity in fintech, amplifying the voices of women
-											in fintech.
-										</p>
+										<div class="block__info">
+											<h3 class="block__title">Women Leading The Way</h3>
+											<p class="block__text">
+												A community-led initiative supporting women in finance,
+												fintech, and business leadership. Women Leading the Way
+												highlights the importance of female leadership and
+												gender diversity in fintech, amplifying the voices
+												of women in fintech.
+											</p>
+										</div>
+										<span class="block__btn btn-transparent btn-arrow"
+											>learn more</span
+										>
 									</div>
 								</div>
-							</div>
-							<div class="projects__block block">
+							</a>
+							<a href="#" class="projects__block block">
 								<div class="block__grid">
 									<div class="block__img">
 										<img src="./img/project3.png" alt="" />
 									</div>
 									<div class="block__wrapper">
-										<h3 class="block__title">CryptoEdu</h3>
-										<p class="block__text">
-											A UK-based educational platform designed to explain
-											digital assets, blockchains, and finance in a clear and
-											accessible way. Crypto Edu promotes the cause of education
-											in digital assets and offers a platform for crypto
-											industry leaders to share their perspectives.
-										</p>
+										<div class="block__info">
+											<h3 class="block__title">CryptoEdu</h3>
+											<p class="block__text">
+												A UK-based educational platform designed to explain
+												digital assets, blockchains, and finance in a clear and
+												accessible way. Crypto Edu promotes the cause of
+												education in digital assets and offers a platform for
+												crypto industry leaders to share their perspectives.
+											</p>
+										</div>
+										<span href="#" class="block__btn btn-transparent btn-arrow"
+											>learn more</span
+										>
 									</div>
 								</div>
-							</div>
-							<div class="projects__block block">
-								<div class="block__grid reverse">
+							</a>
+							<a href="#" class="projects__block block">
+								<div class="block__grid">
 									<div class="block__img">
 										<img src="./img/project4.png" alt="" />
 									</div>
 									<div class="block__wrapper">
-										<h3 class="block__title">Communicate Fintech</h3>
-										<p class="block__text">
-											An industry platform that brings together fintech
-											founders, marketers, and media to exchange insights and
-											foster collaboration. Communicate Fintech serves as a hub
-											for thought leaders and marketing experts to connect,
-											exchange ideas, and drive the industry's advancement.
-										</p>
+										<div class="block__info">
+											<h3 class="block__title">Communicate Fintech</h3>
+											<p class="block__text">
+												An industry platform that brings together fintech
+												founders, marketers, and media to exchange insights and
+												foster collaboration. Communicate Fintech serves as a
+												hub for thought leaders and marketing experts
+												to connect, exchange ideas, and drive the industry's
+												advancement.
+											</p>
+										</div>
+										<span href="#" class="block__btn btn-transparent btn-arrow"
+											>learn more</span
+										>
 									</div>
 								</div>
-							</div>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -335,22 +357,22 @@
 							</div>
 							<div class="partners__item item">
 								<div class="item__img">
-									<img src="./img/partner2.png" alt="" />
+									<img src="./img/partner2.svg" alt="" />
 								</div>
 							</div>
 							<div class="partners__item item">
 								<div class="item__img">
-									<img src="./img/partner3.png" alt="" />
+									<img src="./img/partner3.svg" alt="" />
 								</div>
 							</div>
 							<div class="partners__item item">
 								<div class="item__img">
-									<img src="./img/partner4.png" alt="" />
+									<img src="./img/partner4.svg" alt="" />
 								</div>
 							</div>
 							<div class="partners__item item">
 								<div class="item__img">
-									<img src="./img/partner5.png" alt="" />
+									<img src="./img/partner5.svg" alt="" />
 								</div>
 							</div>
 							<div class="partners__item item">
@@ -370,7 +392,7 @@
 							</div>
 							<div class="partners__item item">
 								<div class="item__img">
-									<img src="./img/partner9.png" alt="" />
+									<img src="./img/partner9.svg" alt="" />
 								</div>
 							</div>
 						</div>
@@ -386,12 +408,14 @@
 									Media publications in
 									<img src="./img/forbes.svg" alt="Forbes" />
 								</h2>
-								<a href="#" class="block__btn btn-transparent btn-arrow"
+								<a
+									href="#"
+									class="block__btn btn-transparent btn-arrow mobile-hidden"
 									>see all</a
 								>
 							</div>
 							<div class="block__grid">
-								<div class="block__item item">
+								<a href="#" class="block__item item">
 									<div class="item__img">
 										<img src="./img/media1.png" alt="" />
 										<span>Expert op-ed</span>
@@ -405,10 +429,10 @@
 											Mindset over resumes: how to build a high-performing team
 										</h3>
 									</div>
-								</div>
-								<div class="block__item item">
+								</a>
+								<a href="#" class="block__item item">
 									<div class="item__img">
-										<img src="./img/media2.png" alt="" />
+										<img src="./img/media1.png" alt="" />
 										<span>Interview</span>
 									</div>
 									<div class="item__wrapper">
@@ -421,10 +445,10 @@
 											prepare for ”Black Swan” events
 										</h3>
 									</div>
-								</div>
-								<div class="block__item item">
+								</a>
+								<a href="#" class="block__item item">
 									<div class="item__img">
-										<img src="./img/media3.png" alt="" />
+										<img src="./img/media1.png" alt="" />
 										<span>commentary</span>
 									</div>
 									<div class="item__wrapper">
@@ -437,17 +461,20 @@
 											about harnessing innovation
 										</h3>
 									</div>
-								</div>
+								</a>
 							</div>
+							<a href="#" class="block__btn btn-transparent btn-arrow pc-hidden"
+								>see all</a
+							>
 						</div>
 						<div class="media__block block block-second">
 							<div class="block__head">
 								<h2 class="block__title">Other sources</h2>
 							</div>
 							<div class="block__grid">
-								<div class="block__item item">
+								<a href="#" class="block__item item">
 									<div class="item__img">
-										<img src="./img/media4.png" alt="" />
+										<img src="./img/media1.png" alt="" />
 										<span>Expert op-ed</span>
 									</div>
 									<div class="item__wrapper">
@@ -460,10 +487,10 @@
 											enough
 										</h3>
 									</div>
-								</div>
-								<div class="block__item item">
+								</a>
+								<a href="#" class="block__item item">
 									<div class="item__img">
-										<img src="./img/media5.png" alt="" />
+										<img src="./img/media1.png" alt="" />
 										<span>Interview</span>
 									</div>
 									<div class="item__wrapper">
@@ -476,10 +503,10 @@
 											without personal accountability?
 										</h3>
 									</div>
-								</div>
-								<div class="block__item item">
+								</a>
+								<a href="#" class="block__item item">
 									<div class="item__img">
-										<img src="./img/media6.png" alt="" />
+										<img src="./img/media1.png" alt="" />
 										<span>commentary</span>
 									</div>
 									<div class="item__wrapper">
@@ -491,10 +518,10 @@
 											Why gender diversity should be  a fintech growth strategy
 										</h3>
 									</div>
-								</div>
-								<div class="block__item item">
+								</a>
+								<a href="#" class="block__item item">
 									<div class="item__img">
-										<img src="./img/media7.png" alt="" />
+										<img src="./img/media1.png" alt="" />
 										<span>Expert op-ed</span>
 									</div>
 									<div class="item__wrapper">
@@ -504,10 +531,10 @@
 										</div>
 										<h3 class="item__title">Crypto needs a crisis playbook</h3>
 									</div>
-								</div>
-								<div class="block__item item">
+								</a>
+								<a href="#" class="block__item item">
 									<div class="item__img">
-										<img src="./img/media8.png" alt="" />
+										<img src="./img/media1.png" alt="" />
 										<span>Interview</span>
 									</div>
 									<div class="item__wrapper">
@@ -520,10 +547,10 @@
 											rebuilding
 										</h3>
 									</div>
-								</div>
-								<div class="block__item item">
+								</a>
+								<a href="#" class="block__item item">
 									<div class="item__img">
-										<img src="./img/media9.png" alt="" />
+										<img src="./img/media1.png" alt="" />
 										<span>commentary</span>
 									</div>
 									<div class="item__wrapper">
@@ -536,11 +563,9 @@
 											fintech startups
 										</h3>
 									</div>
-								</div>
+								</a>
 							</div>
-							<a href="#" class="block__btn btn-transparent btn-arrow"
-								>show more</a
-							>
+							<a href="#" class="block__btn btn-transparent">show more</a>
 						</div>
 					</div>
 				</div>
@@ -552,19 +577,15 @@
 							<img src="./img/footer.png" alt="" />
 						</div>
 						<div class="footer__block">
-							<h2 class="footer__title">Let’s stay in touch</h2>
+							<h2 class="footer__title">Let’s stay <i>in touch</i></h2>
 							<div class="footer__info">
 								<a href="mailto:drofa@drofa-ra.co.uk" class="footer__link">
-									<svg class="icon">
-										<use xlink:href="/sprite.svg#mail"></use>
-									</svg>
+									<img src="icons/mail.svg" alt="" />
 									drofa@drofa-ra.co.uk
 								</a>
 								<div class="footer__foo">
 									<a href="#" class="footer__link">
-										<svg class="icon">
-											<use xlink:href="/sprite.svg#in"></use>
-										</svg>
+										<img src="icons/in.svg" alt="" />
 										Valentina Drofa
 									</a>
 									<p class="footer__text">

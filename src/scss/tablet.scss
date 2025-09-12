@@ -1,0 +1,290 @@
+@use './common' as *;
+
+@media (max-width: 64rem) {
+	.header {
+		&__menu {
+			padding-block: 2.5rem;
+		}
+
+		&__body {
+			@include text-h4;
+
+			max-width: 50vw;
+		}
+
+		&__item {
+			&:not(:last-child) {
+				a {
+					padding-bottom: 1.5rem;
+				}
+			}
+
+			&:not(:first-child) {
+				a {
+					padding-top: 1.5rem;
+				}
+			}
+		}
+
+		&__link {
+			padding-inline: 1.5rem;
+		}
+	}
+	.name {
+		&__wrapper {
+			min-height: 7.8rem;
+		}
+
+		&__title {
+			padding-block: 3rem;
+		}
+	}
+
+	.hero {
+		padding-bottom: 3.5rem;
+
+		&__tabs {
+			@include body-16;
+		}
+
+		&__tab {
+			&:not(:last-child) {
+				padding-bottom: 1rem;
+			}
+
+			&:not(:first-child) {
+				padding-top: 1rem;
+			}
+
+			&::before {
+				width: 0.375rem;
+				height: 0.375rem;
+			}
+		}
+
+		&__img {
+			min-height: 26.25rem;
+		}
+	}
+
+	.about {
+		padding-block: 6rem;
+
+		&__title {
+			@include caps-14;
+		}
+
+		&__bio {
+			i {
+				@include text-h4-a;
+			}
+
+			@include text-h4;
+		}
+
+		&__text {
+			@include body-18;
+		}
+
+		&__img {
+			height: 15rem;
+		}
+
+		&__me {
+			gap: 3.75rem;
+		}
+	}
+
+	.key {
+		padding-block: 6rem;
+
+		&__wrapper {
+			gap: 2rem;
+		}
+
+		&__subtitle {
+			@include text-h3;
+		}
+
+		&__text {
+			padding-inline: 3rem;
+
+			@include body-18;
+		}
+
+		&__item {
+			padding-block: 3rem;
+			min-height: 13.0625rem;
+		}
+	}
+
+	.projects {
+		padding-block: 6rem;
+
+		&__wrapper {
+			gap: 2rem;
+		}
+
+		&__blocks {
+			gap: 2rem;
+		}
+
+		.block {
+			&__img {
+				grid-column: span 12;
+				aspect-ratio: 6.7/3;
+			}
+
+			&__title {
+				i {
+					@include text-h4-a;
+				}
+
+				@include text-h4;
+			}
+
+			&__text {
+				@include body-16;
+			}
+
+			&__wrapper {
+				grid-column: span 12;
+				padding: 2rem;
+				padding-bottom: 4rem;
+				gap: 3rem;
+			}
+
+			&__btn {
+				opacity: 1;
+				visibility: visible;
+			}
+
+			&:nth-child(even) .block__img {
+				order: 0;
+			}
+		}
+	}
+
+	.help {
+		padding-block: 6rem;
+
+		&__title {
+			@include caps-14;
+		}
+
+		&__grid {
+			gap: 0.5rem;
+		}
+
+		&__items {
+			gap: 3rem;
+		}
+
+		.item {
+			&__flex {
+				flex-direction: column-reverse;
+			}
+
+			&__title {
+				i {
+					@include text-h4-a;
+				}
+				@include text-h4;
+			}
+
+			&:not(:last-child) {
+				padding-bottom: 3rem;
+			}
+		}
+	}
+
+	.partners {
+		padding-block: 6rem;
+
+		&__title {
+			@include caps-14;
+		}
+
+		&__wrapper {
+			gap: 2rem;
+		}
+
+		.item {
+			min-height: 7.5rem;
+
+			&__img {
+				max-width: 70%;
+			}
+		}
+	}
+
+	.media {
+		padding-block: 6rem;
+
+		&__wrapper {
+			gap: 3.75rem;
+		}
+
+		.block {
+			padding-block: 1.5rem;
+			gap: 1.5rem;
+
+			&:not(.block-second) {
+				padding-block: 1.5rem;
+			}
+
+			&:not(.block-second)::before {
+				width: calc(100% + 3rem);
+			}
+
+			&__grid {
+				column-gap: 0.5rem;
+				row-gap: 1.5rem;
+			}
+
+			.item {
+				&__title {
+					@include body-16;
+				}
+			}
+
+			&-second {
+				.block__btn {
+					margin-top: 1.5rem;
+				}
+			}
+		}
+	}
+
+	.footer {
+		padding-top: 6rem;
+		padding-bottom: 4rem;
+
+		&__title {
+			i {
+				@include text-h2-a;
+			}
+			@include text-h2;
+		}
+
+		&__grid {
+			min-height: 15rem;
+		}
+
+		&__info {
+			gap: 2rem;
+		}
+
+		&__link {
+			@include body-18;
+
+			img {
+				width: 1.5rem;
+			}
+		}
+
+		&__text {
+			@include body-18-a;
+		}
+	}
+}

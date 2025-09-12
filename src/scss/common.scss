@@ -24,9 +24,17 @@ html {
 }
 
 body {
-	color: var(--3);
-	background-color: var(--1);
 	font-size: 1rem;
+	color: var(--Brown, #3c1f1b);
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+	background-color: var(--white);
+	transition: background 0.2s ease-in-out 0.5s;
+
+	&.menu-open {
+		overflow: hidden;
+		background: var(--Brown, #3c1f1b);
+	}
 }
 
 .wrapper {
@@ -35,6 +43,26 @@ body {
 	flex-direction: column;
 	overflow: hidden;
 	justify-content: space-between;
+	position: relative;
+	background-color: var(--white);
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0);
+		opacity: 0;
+		pointer-events: none;
+		z-index: 10;
+		transition: opacity 0.5s ease-in-out;
+	}
+
+	.menu-open &::before {
+		opacity: 0.6;
+	}
 }
 
 [class$='__container'] {
@@ -45,5 +73,154 @@ body {
 
 	@media (max-width: 30rem) {
 		padding: 0 1rem;
+	}
+}
+
+@mixin text-h4 {
+	font-family: 'Monument';
+	font-size: 1.625rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 120%;
+	letter-spacing: -0.01625rem;
+}
+
+@mixin text-h4-a {
+	color: var(--Brown, #3c1f1b);
+	font-family: 'Synt';
+	font-size: 1.875rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 110%;
+}
+
+@mixin text-h3 {
+	font-size: 2rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 115%;
+	letter-spacing: -0.02rem;
+}
+
+@mixin text-h2 {
+	font-family: 'Monument';
+	font-size: 2.5rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 110%;
+	letter-spacing: -0.025rem;
+}
+
+@mixin text-h2-a {
+	font-family: 'Synt';
+	font-size: 2.6875rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 90%;
+	letter-spacing: -0.05375rem;
+}
+
+@mixin text-h1 {
+	font-family: 'Monument';
+	font-size: 3.375rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 100%;
+	letter-spacing: -0.03375rem;
+}
+
+@mixin text-h1-a {
+	font-family: 'Synt';
+	font-size: 3.75rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 100%;
+	letter-spacing: -0.03375rem;
+}
+
+@mixin body-24 {
+	font-family: 'Monument';
+	font-size: 1.5rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 120%;
+	letter-spacing: -0.015rem;
+}
+
+@mixin body-20 {
+	font-family: 'Monument';
+	font-size: 1.25rem;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 120%;
+	letter-spacing: -0.0125rem;
+}
+
+@mixin body-18 {
+	font-family: 'Monument';
+	font-size: 1.125rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 120%;
+	letter-spacing: -0.01125rem;
+}
+
+@mixin body-18-a {
+	font-family: 'Synt';
+	font-size: 1.375rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 110%;
+}
+
+@mixin body-16 {
+	font-family: 'Monument';
+	font-size: 1rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 130%; /* 20.8px */
+	letter-spacing: -0.01rem;
+}
+
+@mixin caps-16 {
+	font-family: 'Monument';
+	font-size: 1rem;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 120%;
+	letter-spacing: -0.01rem;
+	text-transform: uppercase;
+}
+
+@mixin caps-14 {
+	font-family: 'Monument';
+	font-size: 0.875rem;
+	font-style: normal;
+	font-weight: 500;
+	letter-spacing: 0.0175rem;
+	text-transform: uppercase;
+}
+
+.btn-transparent {
+	display: inline-flex;
+	padding: 0.75rem;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+	border-radius: 0.375rem;
+	background: var(--Brown-5, rgba(60, 31, 27, 0.05));
+
+	@include caps-14;
+}
+
+.btn-arrow {
+	&::after {
+		content: '';
+		width: 0.875rem;
+		height: 0.75rem;
+		background-color: var(--brown);
+		mask: url('/icons/arrow.svg') no-repeat center;
+		mask-size: contain;
+		transition: all 0.45s ease;
 	}
 }
