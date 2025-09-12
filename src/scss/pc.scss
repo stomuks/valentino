@@ -15,15 +15,21 @@
 
 	&__name {
 		@include caps-16;
+		display: block;
 		opacity: 0;
 		visibility: hidden;
 		transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+		&-hidden {
+			display: none;
+		}
 	}
 
 	&.header-scroll {
 		.header__name {
 			opacity: 1;
 			visibility: visible;
+			transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 		}
 	}
 
@@ -171,17 +177,22 @@
 		padding-top: 3.8125rem;
 		padding-bottom: 5rem;
 		grid-column: span 7;
+		font-size: 5.5rem;
+		line-height: 100%;
+		letter-spacing: -0.055rem;
+		line-height: 100%;
+		text-transform: uppercase;
 		color: var(--Brown, #3c1f1b);
 		font-family: 'Monument';
-		font-size: 3.375rem;
 		font-style: normal;
 		font-weight: 500;
-		line-height: 100%;
+		font-size: 3.375rem;
 		letter-spacing: -0.03375rem;
-		text-transform: uppercase;
 
 		@media (min-width: 90rem) {
-			margin-left: -10rem;
+			margin-left: -10.5rem;
+			font-size: 5.5rem;
+			letter-spacing: -0.055rem;
 		}
 	}
 }

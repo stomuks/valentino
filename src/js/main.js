@@ -3,6 +3,7 @@ import '../scss/style.scss'
 document.addEventListener('DOMContentLoaded', () => {
 	const body = document.body
 	const header = document.querySelector('header')
+	const headerName = document.querySelector('.header__name-hidden')
 	const menuBtnOpen = document.querySelector('.header__button-open')
 	const scrollBarWidth =
 		window.innerWidth - document.documentElement.clientWidth
@@ -17,6 +18,11 @@ document.addEventListener('DOMContentLoaded', () => {
 		body.classList.remove('menu-open')
 		header.style.paddingRight = ''
 		body.style.marginRight = ''
+	}
+
+	if (headerName) {
+		headerName.classList.remove('header__name-hidden')
+		headerName.classList.add('header__name')
 	}
 
 	if (menuBtnOpen) {
