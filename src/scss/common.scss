@@ -21,14 +21,15 @@
 
 html {
 	font-size: 16px;
+	scroll-behavior: smooth;
+	overflow-x: hidden;
 }
 
 body {
 	font-size: 1rem;
 	color: var(--Brown, #3c1f1b);
-	overflow-x: hidden;
-	scroll-behavior: smooth;
 	background-color: var(--white);
+	overflow-x: hidden;
 	transition: background 0.2s ease-in-out 0.5s;
 
 	&.menu-open {
