@@ -77,7 +77,8 @@
 		}
 
 		&__bio {
-			i {
+			i,
+			em {
 				@include text-h4-a;
 			}
 
@@ -138,7 +139,8 @@
 			}
 
 			&__title {
-				i {
+				i,
+				em {
 					@include text-h4-a;
 				}
 
@@ -188,7 +190,8 @@
 			}
 
 			&__title {
-				i {
+				i,
+				em {
 					@include text-h4-a;
 				}
 				@include text-h4;
@@ -263,7 +266,8 @@
 		padding-bottom: 4rem;
 
 		&__title {
-			i {
+			i,
+			em {
 				@include text-h2-a;
 			}
 			@include text-h2;

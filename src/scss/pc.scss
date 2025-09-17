@@ -282,7 +282,8 @@
 	&__bio {
 		@include text-h2;
 
-		i {
+		i,
+		em {
 			@include text-h2-a;
 		}
 	}
@@ -461,7 +462,8 @@
 		&__title {
 			@include text-h2;
 
-			i {
+			i,
+			em {
 				@include text-h2-a;
 			}
 		}
@@ -536,7 +538,8 @@
 		&__title {
 			@include text-h2;
 
-			i {
+			i,
+			em {
 				@include text-h2-a;
 			}
 		}
@@ -789,7 +792,8 @@
 	&__title {
 		@include text-h1;
 
-		i {
+		i,
+		em {
 			@include text-h1-a;
 		}
 	}

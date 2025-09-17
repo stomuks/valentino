@@ -89,6 +89,7 @@
 			border-left: none;
 			border-right: none;
 			border-top: none;
+			border-bottom: none;
 
 			&:nth-child(odd) {
 				border: none;
@@ -218,6 +219,10 @@
 		&__img {
 			grid-column: span 6;
 			aspect-ratio: 1/1;
+		}
+
+		&__text {
+			font-size: 1.5rem;
 		}
 
 		&__block {
