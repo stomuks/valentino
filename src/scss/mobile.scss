@@ -1,6 +1,6 @@
 @use './common' as *;
 
-@media (max-width: 48rem) {
+@media (max-width: 47.9rem) {
 	.header {
 		&__body {
 			max-width: 100vw;
@@ -36,6 +36,8 @@
 		}
 
 		&__tab {
+			padding-right: 0;
+
 			&:not(:last-child) {
 				padding-bottom: 1.25rem;
 			}
@@ -77,6 +79,7 @@
 		&__text {
 			padding-inline: 2.5rem;
 			max-width: 16.4375rem;
+			box-sizing: content-box;
 		}
 
 		&__list {
@@ -145,6 +148,10 @@
 			min-height: 6.25rem;
 			&:last-child {
 				grid-column: span 2;
+			}
+
+			&__img {
+				max-width: 80%;
 			}
 		}
 	}

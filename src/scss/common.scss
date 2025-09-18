@@ -209,9 +209,15 @@ body {
 	align-items: center;
 	gap: 0.5rem;
 	border-radius: 0.375rem;
-	background: var(--Brown-5, rgba(60, 31, 27, 0.05));
+	background-color: var(--Brown-5, rgba(60, 31, 27, 0.05));
+	transition: all 0.45s ease;
 
 	@include caps-14;
+
+	&:hover {
+		background-color: #3c1f1b;
+		color: var(--white);
+	}
 }
 
 .btn-arrow {
@@ -223,5 +229,9 @@ body {
 		mask: url('/icons/arrow.svg') no-repeat center;
 		mask-size: contain;
 		transition: all 0.45s ease;
+	}
+
+	&:hover::after {
+		background-color: var(--white);
 	}
 }

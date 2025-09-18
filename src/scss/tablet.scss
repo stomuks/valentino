@@ -66,6 +66,15 @@
 
 		&__img {
 			min-height: 26.25rem;
+			grid-column: span 6;
+		}
+
+		&__tabs {
+			grid-column: 8 / span 5;
+		}
+
+		&__tab {
+			padding-right: 3.5rem;
 		}
 	}
 
@@ -218,7 +227,7 @@
 			min-height: 7.5rem;
 
 			&__img {
-				max-width: 70%;
+				max-width: 80%;
 			}
 		}
 	}
