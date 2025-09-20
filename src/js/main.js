@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	function moveTitleFunc() {
 		if (!moveGrid || !moveBlock || !moveTitle || !moveImg) return
 
-		if (window.innerWidth <= 768) {
+		if (window.innerWidth <= 766) {
 			if (moveTitle.parentElement === moveBlock) {
 				moveGrid.insertBefore(moveTitle, moveImg)
 			}
