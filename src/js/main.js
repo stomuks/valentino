@@ -71,5 +71,54 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	moveTitleFunc()
+
 	window.addEventListener('resize', moveTitle)
+
+	const loadMoreButton = document.querySelector('.js-load-more-publications')
+	if (loadMoreButton) {
+		loadMoreButton.addEventListener('click', function (e) {
+			e.preventDefault()
+
+			const button = this
+			const grid = document.querySelector('.js-publications-grid')
+			let offset = parseInt(button.dataset.offset, 10)
+			const postId = button.dataset.postId
+			const total = parseInt(button.dataset.total, 10)
+
+			button.disabled = true
+			button.textContent = 'Loading...'
+
+			const formData = new FormData()
+			formData.append('action', 'load_more_publications')
+			formData.append('post_id', postId)
+			formData.append('offset', offset)
+
+			fetch(vd_ajax.ajax_url, {
+				method: 'POST',
+				body: formData
+			})
+				.then(response => response.text())
+				.then(html => {
+					if (html.trim()) {
+						grid.insertAdjacentHTML('beforeend', html)
+						const newOffset = offset + 6
+						button.dataset.offset = newOffset
+
+						if (newOffset >= total) {
+							button.style.display = 'none'
+						} else {
+							button.disabled = false
+							button.textContent = 'Show more'
+						}
+					} else {
+						button.style.display = 'none'
+					}
+				})
+				.catch(error => {
+					console.error('Error:', error)
+					button.disabled = false
+					button.textContent = 'Show more'
+				})
+		})
+	}
 })
